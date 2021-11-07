@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 13:12:30 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/06 13:38:30 by abouchfa         ###   ########.fr       */
+/*   Created: 2021/11/07 14:46:41 by abouchfa          #+#    #+#             */
+/*   Updated: 2021/11/07 15:04:17 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	if (c < 65 || c > 122 || (c >= 91 && c <= 96))
-		return (0);
-	return (1);
+	t_list *temp;
+
+	while (*lst)
+	{
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		(*lst) = temp;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:08:37 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/01 13:09:54 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/06 17:31:09 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_atoi(char *str)
 	while (*str == ' ' || *str == '\t' || *str == '\n'
 		|| *str == '\v' || *str == '\f' || *str == '\r')
 		str++;
-	while (*str == '-' || *str == '+')
+	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
 			minus++;

@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 13:12:30 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/06 13:38:30 by abouchfa         ###   ########.fr       */
+/*   Created: 2021/11/07 15:05:41 by abouchfa          #+#    #+#             */
+/*   Updated: 2021/11/07 15:29:35 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (c < 65 || c > 122 || (c >= 91 && c <= 96))
-		return (0);
-	return (1);
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }

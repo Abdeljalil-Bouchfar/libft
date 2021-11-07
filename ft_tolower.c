@@ -6,21 +6,13 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:39:56 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/01 13:40:28 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/06 13:49:42 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_tolower(char *str)
+int	ft_tolower(int c)
 {
-	int	i;
-
-	i = 0;
-	while (*str)
-	{
-		if (*str >= 65 && *str <= 90)
-			*str = *str + 32;
-		str++;
-		i++;
-	}
-	return (str - i);
+	if (c >= 65 && c <= 90)
+		c += 32;
+	return (c);
 }

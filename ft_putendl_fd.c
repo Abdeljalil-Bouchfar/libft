@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:09:09 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/05 10:15:12 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/07 10:15:09 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ void	ft_putendl_fd(char *s, int fd)
 	while (*s)
 	{
 		write (fd, s, 1);
-		write (1, s, 1);
 		s++;
 	}
-	write (1, "\n", 1);
+	write (fd, "\n", 1);
 }
 
 // #include <fcntl.h>

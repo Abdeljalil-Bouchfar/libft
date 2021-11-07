@@ -6,13 +6,13 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:43:44 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/03 08:23:17 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/06 11:40:36 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strncpy(char *dest, char *src, int n)
+static void	ft_strncpy(char *dest, char *src, int n)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ void	ft_strncpy(char *dest, char *src, int n)
 	dest[i] = 0;
 }
 
-void	collect_words(char **arr, char *str, char c)
+static void	collect_words(char **arr, char *str, char c, int len)
 {
 	int	index;
 	int	i;
@@ -30,7 +30,7 @@ void	collect_words(char **arr, char *str, char c)
 
 	index = 0;
 	i = 0;
-	while (str[i])
+	while (index < len)
 	{
 		while (str[i] == c && str[i])
 			i++;
@@ -38,13 +38,13 @@ void	collect_words(char **arr, char *str, char c)
 		while (str[i] != c && str[i])
 			i++;
 		n = i - n;
-		arr[index] = malloc(n + 1);
+		arr[index] = malloc(sizeof(char) * (n + 1));
 		ft_strncpy(arr[index], str + i - n, n);
 		index++;
 	}
 }
 
-int	words_counter(char *str, char c)
+static int	words_counter(char *str, char c)
 {
 	int	words;
 	int	i;
@@ -55,7 +55,7 @@ int	words_counter(char *str, char c)
 	{
 		if (str[i] != c)
 			words++;
-		while (str[i] != c && str[i])
+		while (str[i] != c && str[i + 1])
 			i++;
 		i++;
 	}
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 	if (!arr)
 		return (0);
 	if (length)
-		collect_words(arr, (char *) s, c);
+		collect_words(arr, (char *) s, c, length);
 	arr[length] = 0;
 	return (arr);
 }
@@ -81,7 +81,7 @@ char	**ft_split(char const *s, char c)
 // int main (int ac, char **av)
 // {
 // 	int i = 0;
-// 	char **words = ft_split(av[1], ' ');
+// 	char **words = ft_split("tripouille", 0);
 // 	while(words[i])
-// 		printf("- %s\n", words[i++]);
+// 		printf("|%s|\n", words[i++]);
 // }

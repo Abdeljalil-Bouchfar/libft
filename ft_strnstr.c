@@ -6,17 +6,17 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:09:21 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/02 10:23:00 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/06 17:26:16 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
+	size_t	i;
 
-	if (!needle)
+	if (!*needle || !needle)
 		return ((char *) haystack);
 	while (*haystack && len--)
 	{
@@ -28,6 +28,7 @@ char	*strnstr(const char *haystack, const char *needle, size_t len)
 			i++;
 		}
 		haystack++;
+		len--;
 	}
 	return (0);
 }
@@ -36,8 +37,9 @@ char	*strnstr(const char *haystack, const char *needle, size_t len)
 
 // int main()
 // {
-// 	char s1[] = "Search for it here";
-// 	char s2[] = "for";
-// 	printf("strnstr   : %s\n", strnstr(s1, s2, 0));
-// 	printf("ft_strnstr: %s", strnstr(s1, s2, 0));
+// 	char s1[] = "";
+// 	char s2[] = "";
+// 	int len = -1;
+// 	printf("strnstr   : %s\n", strnstr(s1, s2, len));
+// 	printf("ft_strnstr: %s", ft_strnstr(s1, s2, len));
 // }

@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:56:17 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/05 11:54:55 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/06 13:30:31 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	char	*str;
 
 	str = (char *) s;
-	while (n-- > 0 && *str)
+	while (n--)
 	{
-		if (*str == c)
+		if (*str == (char) c)
 			return (str);
 		str++;
 	}

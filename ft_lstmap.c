@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 13:12:30 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/06 13:38:30 by abouchfa         ###   ########.fr       */
+/*   Created: 2021/11/07 15:08:32 by abouchfa          #+#    #+#             */
+/*   Updated: 2021/11/07 18:21:28 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
 {
-	if (c < 65 || c > 122 || (c >= 91 && c <= 96))
+	t_list	*lst_head;
+	t_list	*new_node;
+
+	if (!lst || !f || !del)
 		return (0);
-	return (1);
+	lst_head = 0;
+	while (lst)
+	{
+		new_node = ft_lstnew(f(lst->content));
+		if (!new_node)
+		{
+			ft_lstclear(&lst_head, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&lst_head, new_node);
+		lst = lst->next;
+	}
+	return (lst_head);
 }
