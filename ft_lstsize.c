@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 13:21:26 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/07 13:28:59 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/07 18:39:17 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	size;
-	t_list temp;
+	int		size;
+	t_list	temp;
 
 	size = 1;
 	if (!lst)
@@ -26,5 +26,5 @@ int	ft_lstsize(t_list *lst)
 		temp = *(temp.next);
 		size++;
 	}
-	return (size); 
+	return (size);
 }

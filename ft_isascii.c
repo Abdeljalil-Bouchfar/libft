@@ -6,13 +6,12 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:13:08 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/06 13:38:36 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/07 18:36:52 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-
 	if (c < 0 || c > 127)
 		return (0);
 	return (1);

@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 11:39:24 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/07 13:02:39 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/07 18:39:01 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ t_list	*ft_lstnew(void *content)
 	t_list	*list;
 
 	list = malloc(sizeof(t_list));
-
 	if (!list)
 		return (0);
 	list->content = content;
