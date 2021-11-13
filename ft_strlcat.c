@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:35:12 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/05 11:51:50 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:09:28 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	s_l;
-	unsigned int	d_l;
+	size_t	i;
+	size_t	j;
+	size_t	s_l;
+	size_t	d_l;
 
 	j = 0;
 	s_l = 0;
@@ -34,3 +34,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i] = 0;
 	return (d_l + s_l);
 }
+
+// int main()
+// {
+// 	char	*dest = "teetetet";
+// 	printf("%lu \n%s", strlcat(dest, 0, 5), dest);
+// }

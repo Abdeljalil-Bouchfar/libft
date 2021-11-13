@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:23:25 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/05 12:08:46 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/13 08:42:45 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strrchr(const char *s, int c)
 // int main()
 // {
 //     char	str[] = "My name is abd..";
-//     printf("strrchr   : %s\n", strrchr(NULL, 'm'));
-// 	printf("ft_strrchr: %s\n", ft_strrchr(NULL, 'm'));
+//     printf("strrchr   : %s\n", strrchr(str, 'm' + 2560));
+// 	printf("ft_strrchr: %s\n", ft_strrchr(str, 'm' + 2560));
 //     return 0;
 // }

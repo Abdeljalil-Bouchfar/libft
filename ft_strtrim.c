@@ -6,42 +6,35 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:25:08 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/07 18:40:25 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/13 08:28:52 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_getstart(const char *s1, const char *set)
+static int	getstart(const char *s1, const char *set)
 {
-	size_t	len;
-	size_t	i;
+	int	i;
 
-	len = ft_strlen(s1);
-	i = 0;
-	while (i < len)
-	{
-		if (ft_strchr(set, s1[i]) == 0)
+	i = -1;
+	while (s1[++i])
+		if (!ft_strchr(set, s1[i]))
 			break ;
-		i++;
-	}
 	return (i);
 }
 
-static int	ft_getend(const char *s1, const char *set)
+static int	getend(const char *s1, const char *set)
 {
 	size_t	len;
-	size_t	i;
 
 	len = ft_strlen(s1);
-	i = 0;
-	while (i < len)
+	while (len)
 	{
-		if (ft_strchr(set, s1[len - i - 1]) == 0)
+		if (!ft_strchr(set, s1[len]))
 			break ;
-		i++;
+		len--;
 	}
-	return (len - i);
+	return (len + 1);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -55,8 +48,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	if (!set)
 		return (ft_strdup(s1));
-	start = ft_getstart(s1, set);
-	end = ft_getend(s1, set);
+	start = getstart(s1, set);
+	end = getend(s1, set);
 	size = end - start + 1;
 	if (size <= 0)
 		return (ft_strdup(""));
@@ -68,7 +61,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 // int main()
 // {
-// 	char s[] = "This is a Thi";
-// 	char *res = ft_strtrim(s, "This");
+// 	char *s1 = "5\n\n \n \t\t\n  ";
+// 	char *res = ft_strtrim(s1, " \n\t");
 // 	printf("%s", res);
 // }

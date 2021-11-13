@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:27:58 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/05 12:08:10 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/11 10:56:48 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	size;
 	char	*res;
 
+	if (!s1 || !s2)
+		return (NULL);
 	size = ft_strlen((char *) s1) + ft_strlen((char *) s2) + 1;
 	res = malloc(sizeof(char) * size);
 	if (!res)

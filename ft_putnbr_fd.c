@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:15:27 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/07 10:15:53 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/10 17:38:02 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ void	ft_putnbr_fd(int n, int fd)
 		nb /= 10;
 	}
 	str[i++] = nb + 48;
-	printf("i is: %i\n", i);
 	if (n < 0)
 		write (fd, "-", 1);
 	while (i--)

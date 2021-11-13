@@ -6,24 +6,25 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:08:37 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/06 17:31:09 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/12 16:23:40 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+#include "libft.h"
+
+int	ft_atoi(const char *str)
 {
 	int	n;
 	int	minus;
 
-	minus = 0;
+	minus = 1;
 	n = 0;
-	while (*str == ' ' || *str == '\t' || *str == '\n'
-		|| *str == '\v' || *str == '\f' || *str == '\r')
+	while (*str == 32 || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-			minus++;
+			minus = -1;
 		str++;
 	}
 	while (*str && *str >= '0' && *str <= '9')
@@ -31,7 +32,10 @@ int	ft_atoi(char *str)
 		n = n * 10 + (*str - 48);
 		str++;
 	}
-	if (minus % 2 != 0)
-		n *= -1;
-	return (n);
+	return ((int) n * minus);
 }
+
+// int main(int ac, char **av)
+// {
+// 	printf("ft_atoi: %d\natoi: %d\n", ft_atoi (av[1]), atoi(av[1]));
+// }

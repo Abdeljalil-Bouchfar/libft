@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    MakeFile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 11:05:20 by abouchfa          #+#    #+#              #
-#    Updated: 2021/11/07 11:50:57 by abouchfa         ###   ########.fr        #
+#    Updated: 2021/11/12 16:43:49 by abouchfa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,22 +19,25 @@ CFILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_str
 		ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
 		ft_putnbr_fd.c
 
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
+CBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
 		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 OBJS = $(CFILES:.c=.o)
 
-OBJSBONUS = ${BONUS:.c=.o}
+OBJSBONUS = ${CBONUS:.c=.o}
 
 CFLAGS = -Wall -Wextra -Werror
 
-all:
-	cc $(CFLAGS) -c $(CFILES)
+all: $(NAME)
+
+$(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus:
-	cc $(CFLAGS) -c $(BONUS) $(CFILES)
-	ar rcs $(NAME) $(OBJSBONUS) $(OBJS)
+.c.o:
+	cc $(CFLAGS) -c $<
+
+bonus: $(OBJSBONUS)
+	ar rc $(NAME) $(OBJSBONUS)
 
 clean:
 	rm -f $(OBJS) $(OBJSBONUS)
@@ -44,4 +47,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: bonus all clean fclean re
+.PHONY: all bonus clean fclean re

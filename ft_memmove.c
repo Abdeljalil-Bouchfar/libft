@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:29:53 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/06 10:44:07 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/12 18:19:03 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,16 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
 	char	*s;
 	char	*d;
 
 	if (!dst && !src)
 		return (0);
-	i = 0;
 	s = (char *) src;
 	d = (char *) dst;
 	if (dst > src)
-	{
 		while (len--)
-		{
 			d[len] = s[len];
-			i++;
-		}
-	}
 	else
 		ft_memcpy(dst, src, len);
 	return (d);

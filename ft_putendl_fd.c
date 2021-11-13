@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:09:09 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/07 10:15:09 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/12 18:22:31 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
 	{
 		write (fd, s, 1);
@@ -27,5 +29,5 @@ void	ft_putendl_fd(char *s, int fd)
 // {
 // 	int fd = open("test.txt", O_WRONLY);
 // 	printf("file descriptor: %d\n", fd);
-// 	ft_putendl_fd("Test", fd);
+// 	ft_putendl_fd("Test", -3);
 // }

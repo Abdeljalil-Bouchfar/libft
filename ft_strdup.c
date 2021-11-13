@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:34:22 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/01 13:35:02 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/12 18:33:33 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strdup(char *src)
 		i++;
 	str = malloc(i + 1);
 	if (!str)
-		return ((char *)0);
+		return (NULL);
 	i = 0;
 	while (*src)
 		str[i++] = *src++;

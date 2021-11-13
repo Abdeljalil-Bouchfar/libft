@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:13:00 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/07 18:39:45 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/12 18:20:05 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char			*str;
-	size_t			i;
+	char	*str;
 
 	str = (char *) b;
-	i = -1;
 	while (len--)
 		str[len] = (unsigned char) c;
 	return (b);

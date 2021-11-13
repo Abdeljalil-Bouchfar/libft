@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:43:44 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/06 11:40:36 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/12 18:54:00 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,13 @@ static void	collect_words(char **arr, char *str, char c, int len)
 			i++;
 		n = i - n;
 		arr[index] = malloc(sizeof(char) * (n + 1));
+		if (!arr[index])
+		{
+			while (index--)
+				free(arr[index]);
+			free(arr);
+			break ;
+		}
 		ft_strncpy(arr[index], str + i - n, n);
 		index++;
 	}
@@ -67,6 +74,8 @@ char	**ft_split(char const *s, char c)
 	char	**arr;
 	int		length;
 
+	if (!s)
+		return (NULL);
 	length = words_counter((char *) s, c);
 	arr = malloc((length + 1) * sizeof(char *));
 	if (!arr)

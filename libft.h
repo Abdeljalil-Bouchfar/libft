@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/10 17:24:29 by abouchfa          #+#    #+#             */
+/*   Updated: 2021/11/12 15:50:13 by abouchfa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
 # include <string.h>
 # include <stdlib.h>
-# include <stdio.h>
 # include <unistd.h>
 
 int		ft_isalpha(int c);

@@ -6,13 +6,13 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:03:58 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/05 12:04:00 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/12 16:45:41 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	nbrtostr(char	*str, int size, long int nb)
+static void	nbrtoi(char	*str, int size, long int nb)
 {
 	if (nb == 0)
 		str[0] = '0';
@@ -31,15 +31,13 @@ static void	nbrtostr(char	*str, int size, long int nb)
 
 char	*ft_itoa(int n)
 {
-	long int	nb;
 	long int	temp_n;
 	int			size;
 	char		*str;
 
 	size = 1;
-	nb = n;
 	temp_n = n;
-	if (temp_n < 0 || temp_n == 0)
+	if (temp_n <= 0)
 	{
 		temp_n = -temp_n;
 		size++;
@@ -51,8 +49,8 @@ char	*ft_itoa(int n)
 	}
 	str = malloc(size * sizeof(char));
 	if (!str)
-		return (0);
-	nbrtostr(str, size, nb);
+		return (NULL);
+	nbrtoi(str, size, (long int) n);
 	return (str);
 }
 

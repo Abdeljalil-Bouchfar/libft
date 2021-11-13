@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 11:16:56 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/07 10:05:05 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/11 10:21:43 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_l;
 	char	*res;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	s_l = ft_strlen(s);
 	while (i < s_l && i < len)
