@@ -6,7 +6,7 @@
 #    By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 11:05:20 by abouchfa          #+#    #+#              #
-#    Updated: 2021/11/12 16:43:49 by abouchfa         ###   ########.fr        #
+#    Updated: 2021/11/13 09:15:37 by abouchfa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ $(NAME): $(OBJS)
 	cc $(CFLAGS) -c $<
 
 bonus: $(OBJSBONUS)
-	ar rc $(NAME) $(OBJSBONUS)
+	ar rcs $(NAME) $(OBJSBONUS)
 
 clean:
 	rm -f $(OBJS) $(OBJSBONUS)
