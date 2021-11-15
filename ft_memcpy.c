@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:11:37 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/14 15:11:12 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:45:04 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		*d++ = *s++;
 	return (dst);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// int main()
-// {
-//     char str[100] = "Geeksfor";
-//     printf("Original :%s\n ", str);
-//     memcpy(str + 5, str, 10);
-//     printf("Result   : %s\n ", str); 
-//     return 0;
-// }

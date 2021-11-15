@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:03:58 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/12 16:45:41 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:44:30 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,3 @@ char	*ft_itoa(int n)
 	nbrtoi(str, size, (long int) n);
 	return (str);
 }
-
-// int main(int ac, char **av)
-// {
-// 	printf("%s", ft_itoa(atoi(av[1])));
-// }

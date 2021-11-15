@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:25:08 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/13 08:28:52 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:46:41 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(res, s1 + start, size);
 	return (res);
 }
-// int main()
-// {
-// 	char *s1 = "5\n\n \n \t\t\n  ";
-// 	char *res = ft_strtrim(s1, " \n\t");
-// 	printf("%s", res);
-// }

@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:15:24 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/12 18:34:16 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:46:04 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	while (s[++i])
 		f(i, s + i);
 }
-
-// void	to_upper(unsigned int i, char *s)
-// {
-// 	s[i] -= 32;
-// }
-
-// int main ()
-// {
-// 	char s[] = "hello";
-// 	ft_striteri(s, &to_upper);
-// 	printf("%s", s);
-// }

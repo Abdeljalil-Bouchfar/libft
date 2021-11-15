@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:27:58 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/11 10:56:48 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:46:08 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	res[i] = 0;
 	return (res);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	printf("%s",ft_strjoin("Hello", " ME"));
-// }

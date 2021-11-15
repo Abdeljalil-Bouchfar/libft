@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:43:44 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/12 18:54:00 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:45:54 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,12 +85,3 @@ char	**ft_split(char const *s, char c)
 	arr[length] = 0;
 	return (arr);
 }
-
-// #include <stdio.h>
-// int main (int ac, char **av)
-// {
-// 	int i = 0;
-// 	char **words = ft_split("tripouille", 0);
-// 	while(words[i])
-// 		printf("|%s|\n", words[i++]);
-// }

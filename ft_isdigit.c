@@ -6,13 +6,13 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:20:26 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/01 16:55:05 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:43:15 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int	ft_isdigit(size_t c)
+int	isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

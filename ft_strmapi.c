@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:52:33 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/12 18:44:24 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:46:24 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	res[i] = 0;
 	return (res);
 }
-
-// char to_upper(unsigned int i, char c)
-// {
-// 	return (c - 32);
-// }
-
-// int main ()
-// {
-// 	char s[] = "hello";
-// 	printf("%s", ft_strmapi(s, &to_upper));
-// }

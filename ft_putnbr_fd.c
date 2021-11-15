@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:15:27 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/10 17:38:02 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:45:30 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,3 @@ void	ft_putnbr_fd(int n, int fd)
 	while (i--)
 		write (fd, str + i, 1);
 }
-
-// #include <fcntl.h>
-// int main()
-// {
-// 	int fd = open("test.txt", O_WRONLY);
-// 	printf("file descriptor: %d\n", fd);
-// 	ft_putnbr_fd(0, fd);
-// }

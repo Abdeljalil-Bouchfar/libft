@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:35:12 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/11 22:09:28 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/15 21:46:14 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i] = 0;
 	return (d_l + s_l);
 }
-
-// int main()
-// {
-// 	char	*dest = "teetetet";
-// 	printf("%lu \n%s", strlcat(dest, 0, 5), dest);
-// }
