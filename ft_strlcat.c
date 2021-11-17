@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:35:12 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/15 21:46:14 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/16 15:56:30 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	j = 0;
 	s_l = 0;
 	d_l = 0;
-	while (dst[d_l])
-		d_l++;
-	while (src[s_l])
-		s_l++;
+	s_l = ft_strlen(src);
+	if (!dst && !dstsize)
+		return (s_l);
+	d_l = ft_strlen(dst);
 	if (d_l >= dstsize)
 		return (dstsize + s_l);
 	i = d_l;

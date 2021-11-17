@@ -6,7 +6,7 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 15:08:32 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/07 18:37:33 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/16 15:45:20 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (!lst || !f || !del)
 		return (0);
+	lst_head = NULL;
 	while (lst)
 	{
 		new_node = ft_lstnew(f(lst->content));

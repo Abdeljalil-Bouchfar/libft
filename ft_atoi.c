@@ -6,11 +6,9 @@
 /*   By: abouchfa <abouchfa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:08:37 by abouchfa          #+#    #+#             */
-/*   Updated: 2021/11/15 21:43:26 by abouchfa         ###   ########.fr       */
+/*   Updated: 2021/11/16 15:45:37 by abouchfa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
