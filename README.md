@@ -1,5 +1,5 @@
 # libft
-This project is about coding a C library. It contains a lot of general-purpose functions your programs will rely upon.
+This project is about coding a C library. It contains a lot of general-purpose functions that C programs rely upon.
 
 
 # libft
